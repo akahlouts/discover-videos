@@ -22,7 +22,7 @@ const NavBar = () => {
         }
       } catch (error) {
         // Handle errors if required!
-        console.log("Error retrieving email:", error);
+        console.error("Error retrieving email:", error);
       }
     }
     getUsername();
