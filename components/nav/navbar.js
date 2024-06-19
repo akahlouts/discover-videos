@@ -13,7 +13,7 @@ const NavBar = () => {
   const router = useRouter();
 
   useEffect(() => {
-    async function getUsername() {
+    const applyUsernameInNav = async () => {
       try {
         // Assumes a user is already logged in
         const { email } = await magic.user.getInfo();
@@ -24,8 +24,8 @@ const NavBar = () => {
         // Handle errors if required!
         console.error("Error retrieving email:", error);
       }
-    }
-    getUsername();
+    };
+    applyUsernameInNav();
   }, []);
 
   const handleOnClickHome = (e) => {
